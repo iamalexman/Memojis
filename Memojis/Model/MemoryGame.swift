@@ -5,8 +5,6 @@
 //  Created by Alex Smith on 22.10.2021.
 //
 
-// MODEL
-
 import Foundation
 import SwiftUI
 
