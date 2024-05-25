@@ -8,11 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct MemoryGame <CardContent> where CardContent: Equatable {
+struct MemoryGame<CardContent> where CardContent: Equatable {
     
-	var cards: Array<Card>
+    var cards: Array<Card>
     
-	public var indexOfTheOneAndOnlyFaceUpCard: Int? {
+    public var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter ({ cards[$0].isFaceUp }).oneAndOnly }
         set { cards.indices.forEach { cards[$0].isFaceUp = ($0 == newValue) }}
     }
@@ -37,11 +37,11 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
         cards.shuffle()
     }
     
-    init(numberOfPairsOfCards:Int, createCardContent: (Int) -> CardContent) {
+    init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
         cards = []
         // add numberOfPairsOfCards * 2 cards to cards array
         for pairIndex in 0..<numberOfPairsOfCards {
-            let content = createCardContent (pairIndex)
+            let content = createCardContent(pairIndex)
             cards.append(Card(content: content, id: pairIndex * 2))
             cards.append(Card(content: content, id: pairIndex * 2 + 1))
         }
@@ -79,7 +79,7 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
         var bonusTimeLimit: TimeInterval = 6
         
         // how long this card has ever been face up
-		public var faceUpTime: TimeInterval {
+        public var faceUpTime: TimeInterval {
             if let lastFaceUpDate = lastFaceUpDate {
                 return pastFaceUpTime + Date().timeIntervalSince(lastFaceUpDate)
             } else {
@@ -98,7 +98,9 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
         }
         // percentage of the bonus time remaining
         var bonusRemaining: Double {
-            (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining / bonusTimeLimit : 0
+            (bonusTimeLimit > 0 && bonusTimeRemaining > 0)
+            ? bonusTimeRemaining / bonusTimeLimit
+            : 0
         }
         // whether the card was matched during the bonus time period
         var hasEarnedBonus: Bool {
@@ -110,13 +112,13 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
         }
         
         // called when the card transitions to face up state
-		public mutating func startUsingBonusTime() {
+        public mutating func startUsingBonusTime() {
             if isConsumingBonusTime, lastFaceUpDate == nil {
                 lastFaceUpDate = Date()
             }
         }
         // called when the card goes back face down (or gets matched)
-		public mutating func stopUsingBonusTime() {
+        public mutating func stopUsingBonusTime() {
             pastFaceUpTime = faceUpTime
             lastFaceUpDate = nil
         }

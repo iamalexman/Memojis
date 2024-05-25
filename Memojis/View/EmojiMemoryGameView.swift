@@ -13,6 +13,8 @@ struct EmojiMemoryGameView: View {
     
     @Namespace private var dealingNamespace
     
+    @State private var isAnimating = false
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
@@ -52,7 +54,7 @@ struct EmojiMemoryGameView: View {
     }
     
     var gameBody: some View {
-        AspectVGrid (items:game.cards,aspectRatio: 2/3) { card in
+        AspectVGrid (items: game.cards, aspectRatio: 2 / 3) { card in
             if isUndealt(card) || (card.isMatched && !card.isFaceUp) {
                 Color.clear
             } else {
@@ -81,6 +83,8 @@ struct EmojiMemoryGameView: View {
             }
         }
         .frame(width: CardConstants.undealtWidth, height: CardConstants.undealtHeight)
+        .scaleEffect(isAnimating ? 1.0 : 0.9)
+        .animation(.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: isAnimating)
         .foregroundColor(CardConstants.color)
         .onTapGesture {
             // "deal" cards
@@ -90,6 +94,9 @@ struct EmojiMemoryGameView: View {
                 }
             }
         }
+        .onAppear {
+            isAnimating = true
+        }
     }
     
     var shuffle: some View {
@@ -98,11 +105,12 @@ struct EmojiMemoryGameView: View {
                 game.shuffle()
             }
         }
+        .font(.system(size: 25, weight: Font.Weight.semibold))
     }
     
-	/// Description
-	/// - Parameter textStyle: textStyle description
-	/// - Returns: description
+    /// Description
+    /// - Parameter textStyle: textStyle description
+    /// - Returns: description
     var restart: some View {
         Button("Restart") {
             withAnimation {
@@ -110,12 +118,13 @@ struct EmojiMemoryGameView: View {
                 game.restart()
             }
         }
+        .font(.system(size: 25, weight: Font.Weight.semibold))
     }
     
     public struct CardConstants {
         
         static let color = Color.red
-        static let aspectRatio: CGFloat = 2/3
+        static let aspectRatio: CGFloat = 2 / 3
         static let dealDuration: Double = 0.5
         static let totalDealDuration: Double = 2
         static let undealtHeight: CGFloat = 90
@@ -162,7 +171,7 @@ struct CardView: View {
         min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
     }
     
-	public struct DrawingConstants {
+    public struct DrawingConstants {
         
         static let fontScale:CGFloat = 0.7
         static let fontSize: CGFloat = 32
