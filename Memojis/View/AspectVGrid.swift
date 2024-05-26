@@ -9,11 +9,11 @@ import SwiftUI
 
 struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Identifiable {
     
-    var items: [Item]
-    var aspectRatio: CGFloat
-    var content: (Item) -> ItemView
+    private var items: [Item]
+    private var aspectRatio: CGFloat
+    private var content: (Item) -> ItemView
     
-    init(items: [Item], 
+    init(items: [Item],
          aspectRatio: CGFloat,
          @ViewBuilder content: @escaping (Item) -> ItemView) {
         
@@ -38,13 +38,13 @@ struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Identifiabl
         }
     }
     
-	public func adaptiveGridItem(width: CGFloat) -> GridItem {
+	private func adaptiveGridItem(width: CGFloat) -> GridItem {
         var gridItem = GridItem(.adaptive(minimum: width))
         gridItem.spacing = 0
         return gridItem
     }
     
-	public func widthThatFits(itemCount: Int,
+    private func widthThatFits(itemCount: Int,
                                in size: CGSize,
                                itemAspectRatio: CGFloat) -> CGFloat {
         var columnCount = 1

@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
-
+///
+/// Class EmojiMemoryGame has an emojis card set
+///
 class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
-	
-    private static let emojis = [
+    ///
+    /// 🚲 🚂 🚁 🚜 🚕 🏎 🚑 🚓 🚒 ✈️ 🚀
+    /// ⛵️🛸🛶🚌🏍🛺🚡🛵 🚗 🚚 🚇 🚙 🚈
+    ///
+    public static let emojis = [
 		"🚲", "🚂", "🚁", "🚜", "🚕", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀",
 		"⛵️","🛸","🛶","🚌","🏍","🛺","🚡","🛵","🚗","🚚","🚇","🚙","🚈"
 	]
@@ -21,29 +26,30 @@ class EmojiMemoryGame: ObservableObject {
         }
     }
     
-    @Published private var model = createMemoryGame ()
+    @Published private var model = createMemoryGame()
     
     var cards: Array<Card> {
         model.cards
     }
     
     // MARK: Intents
-    
-    /// Intents
+    ///
+    /// ### Intents
+    /// func choose
     ///
     /// Allows you to select the first and second card in a pair
     func choose (_ card: Card) {
         model.choose(card)
     }
     
-    /// Intents
+    /// func shuffle
     ///
     /// Allows you to shuffle cards on the field
     func shuffle() {
         model.shuffle()
     }
     
-    /// Intents
+    /// func restart
     ///
     /// Allows you to restart the game
     func restart() {

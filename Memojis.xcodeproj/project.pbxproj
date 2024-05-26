@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1B2DBE2C03C5D80006DD19 /* MemojisDocumentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B2DBD2C03C5D80006DD19 /* MemojisDocumentation.docc */; };
 		5E5DE5ED2718D02800C79175 /* MemojisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5EC2718D02800C79175 /* MemojisApp.swift */; };
 		5E5DE5EF2718D02800C79175 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5EE2718D02800C79175 /* EmojiMemoryGameView.swift */; };
 		5E5DE5F12718D02900C79175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5DE5F02718D02900C79175 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E1B2DBD2C03C5D80006DD19 /* MemojisDocumentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MemojisDocumentation.docc; sourceTree = "<group>"; };
 		5E5DE5E92718D02800C79175 /* Memojis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memojis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5DE5EC2718D02800C79175 /* MemojisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojisApp.swift; sourceTree = "<group>"; };
 		5E5DE5EE2718D02800C79175 /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		5E855A672BFBC24D006680F5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5E1B2DBD2C03C5D80006DD19 /* MemojisDocumentation.docc */,
 				5E5DE5F02718D02900C79175 /* Assets.xcassets */,
 				5E5DE5F22718D02900C79175 /* Preview Content */,
 			);
@@ -142,7 +145,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					5E5DE5E82718D02800C79175 = {
 						CreatedOnToolsVersion = 13.0;
@@ -190,6 +193,7 @@
 				5E5DE5EF2718D02800C79175 /* EmojiMemoryGameView.swift in Sources */,
 				5E5DE5ED2718D02800C79175 /* MemojisApp.swift in Sources */,
 				5E5DE5FF2720CAC200C79175 /* AspectVGrid.swift in Sources */,
+				5E1B2DBE2C03C5D80006DD19 /* MemojisDocumentation.docc in Sources */,
 				5E5DE5FD271A1A4400C79175 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +205,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -249,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -263,6 +268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -305,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +338,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,7 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -31,17 +31,17 @@ struct EmojiMemoryGameView: View {
         .padding()
     }
     
-    @State private var dealt = Set<Int>()
+    @State private var deal = Set<Int>()
     
-    public func deal(_ card: EmojiMemoryGame.Card) {
-        dealt.insert(card.id)
+    private func deal(_ card: EmojiMemoryGame.Card) {
+        deal.insert(card.id)
     }
     
-    public func isUndealt(_ card: EmojiMemoryGame.Card) -> Bool {
-        !dealt.contains(card.id)
+    private func isUndealt(_ card: EmojiMemoryGame.Card) -> Bool {
+        !deal.contains(card.id)
     }
     
-    public func dealAnimation(for card: EmojiMemoryGame.Card) -> Animation {
+    private func dealAnimation(for card: EmojiMemoryGame.Card) -> Animation {
         var delay = 0.0
         if let index = game.cards.firstIndex(where: { $0.id == card.id }) {
             delay = Double(index) * (CardConstants.totalDealDuration / Double(game.cards.count))
@@ -49,11 +49,11 @@ struct EmojiMemoryGameView: View {
         return Animation.easeInOut(duration: CardConstants.dealDuration).delay(delay)
     }
     
-    public func zIndex(of card: EmojiMemoryGame.Card) -> Double {
+    private func zIndex(of card: EmojiMemoryGame.Card) -> Double {
         -Double(game.cards.firstIndex(where: { $0.id == card.id }) ?? 0)
     }
     
-    var gameBody: some View {
+    private var gameBody: some View {
         AspectVGrid (items: game.cards, aspectRatio: 2 / 3) { card in
             if isUndealt(card) || (card.isMatched && !card.isFaceUp) {
                 Color.clear
@@ -114,14 +114,14 @@ struct EmojiMemoryGameView: View {
     var restart: some View {
         Button("Restart") {
             withAnimation {
-                dealt = []
+                deal = []
                 game.restart()
             }
         }
         .font(.system(size: 25, weight: Font.Weight.semibold))
     }
     
-    public struct CardConstants {
+    private struct CardConstants {
         
         static let color = Color.red
         static let aspectRatio: CGFloat = 2 / 3
@@ -132,6 +132,9 @@ struct EmojiMemoryGameView: View {
     }
 }
 
+///
+/// CardView contains card and animated state
+///
 struct CardView: View {
     
     let card: EmojiMemoryGame.Card
@@ -158,8 +161,8 @@ struct CardView: View {
                 .padding(5)
                 .opacity(0.6)
                 Text(card.content)
-                    .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
-                    .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
+                    .rotationEffect(.degrees(card.isMatched ? 360 : 0))
+                    .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: card.isMatched)
                     .font(Font.system(size: DrawingConstants.fontSize))
                     .scaleEffect(scale (thatFits: geometry.size))
             }
@@ -167,11 +170,11 @@ struct CardView: View {
         }
     }
     
-    public func scale(thatFits size: CGSize) -> CGFloat {
+    private func scale(thatFits size: CGSize) -> CGFloat {
         min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
     }
     
-    public struct DrawingConstants {
+    private struct DrawingConstants {
         
         static let fontScale:CGFloat = 0.7
         static let fontSize: CGFloat = 32

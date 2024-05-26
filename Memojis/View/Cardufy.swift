@@ -18,7 +18,7 @@ struct Cardify: AnimatableModifier {
         set { rotation = newValue }
     }
     
-    var rotation: Double
+    private var rotation: Double
     
     func body(content: Content) -> some View {
         ZStack {
