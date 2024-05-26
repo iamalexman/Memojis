@@ -6,7 +6,7 @@
 - Export it using GitHub Actions
 - Publish it as a static site on the GitHub Pages
 
-![Screenshot 2024-05-26 at 10 38 16](https://github.com/iamalexman/Memojis/assets/61458847/109cfc14-c52b-4c13-8360-a14727825ed9)
+![Screenshot 2024-05-26 at 13 31 56](https://github.com/iamalexman/Memojis/assets/61458847/23fe6ffa-3082-4f65-9fbd-392fe1c0b05f)
 
 [Final Result on Pages](https://iamalexman.github.io/Memojis/documentation/memojis)
 
