@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
-/// A set of card emoji
+
+/// The emojis card set
 ///
 /// 🚲 🚂 🚁 🚜 🚕 🏎 🚑 🚓 🚒 ✈️ 🚀
 /// ⛵️🛸🛶🚌🏍🛺🚡🛵 🚗 🚚 🚇 🚙 🚈
 ///
+
 @main
 struct MemojisApp: App {
     

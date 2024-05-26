@@ -1,33 +1,33 @@
-#1
+# 1. Workflow name
 name: docc
 
-#2
+# 2. Events
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-#3
+# 3. Permissons
 permissions:
   pages: write
   id-token: write
   contents: read
   
-#1
+# 4. Job build
 jobs:
   build:
-    #2
+    # 5. Runner machine
     runs-on: macos-12
-    #3
+    # 6. Job steps
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-    #4
+    # 7. Run script
       - name: Run Build Docs
         run: ./build-docc.sh
-    #5
+    # 8. GitHub actions for configuring and uploading script content
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
@@ -36,13 +36,13 @@ jobs:
         with:
           path: .docs
 
-  #1
+  # 9. Publishing with deploy job
   deploy:
-    #2
+    # 10. Runner machine
     runs-on: ubuntu-latest
-    #3
+    # 11. Dependency on previous job
     needs: build
-    #4
+    # 12. Job steps with environment
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

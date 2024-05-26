@@ -29,10 +29,6 @@
 		5E5DE5FE2720CAC200C79175 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		5E5DE6002720D6AE00C79175 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		5E5DE602272212EC00C79175 /* Cardufy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardufy.swift; sourceTree = "<group>"; };
-		5EA878E0273BDB84000CF0E8 /* MainScreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen2.png; sourceTree = "<group>"; };
-		5EA878E1273BDB84000CF0E8 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
-		5EA878E2273BDB84000CF0E8 /* MainScreen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen3.png; sourceTree = "<group>"; };
-		5EA878E3273BDB84000CF0E8 /* MainScreen4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +81,6 @@
 		5E855A672BFBC24D006680F5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5EA878DF273BDB63000CF0E8 /* Screenshots */,
 				5E5DE5F02718D02900C79175 /* Assets.xcassets */,
 				5E5DE5F22718D02900C79175 /* Preview Content */,
 			);
@@ -117,17 +112,6 @@
 				5E5DE5EE2718D02800C79175 /* EmojiMemoryGameView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5EA878DF273BDB63000CF0E8 /* Screenshots */ = {
-			isa = PBXGroup;
-			children = (
-				5EA878E1273BDB84000CF0E8 /* MainScreen.png */,
-				5EA878E0273BDB84000CF0E8 /* MainScreen2.png */,
-				5EA878E2273BDB84000CF0E8 /* MainScreen3.png */,
-				5EA878E3273BDB84000CF0E8 /* MainScreen4.png */,
-			);
-			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
