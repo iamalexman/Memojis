@@ -1,8 +1,8 @@
 # Rich Documentation for the Memojis Game
 
-### Swift-DocC + GitHub Pages + GitHub Actions
+### Swift-DocC + GitHub Actions + GitHub Pages
 
-- Make a rich documentation for your project or a framework
+- Make a rich documentation for your project or framework
 - Export it using GitHub Actions
 - Publish it as a static site on the GitHub Pages
 
