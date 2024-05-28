@@ -2,7 +2,7 @@
 //  Pie.swift
 //  Memojis
 //
-//  Created by Alex Smith on 21.10.2021.
+//  Created by Alex Kuznetcov on 21.10.2021.
 //
 
 import SwiftUI

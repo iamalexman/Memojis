@@ -2,7 +2,7 @@
 //  EmojiMemoryGame.swift
 //  Memojis
 //
-//  Created by Alex Smith on 22.10.2021.
+//  Created by Alex Kuznetcov on 22.10.2021.
 //
 
 import SwiftUI
@@ -11,15 +11,21 @@ import SwiftUI
 ///
 class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
+    
+    /// A Set of emoji to generate pairs of cards based on them
     ///
+    /// ```
+    /// public static let emojis = [
     /// 🚲 🚂 🚁 🚜 🚕 🏎 🚑 🚓 🚒 ✈️ 🚀
     /// ⛵️🛸🛶🚌🏍🛺🚡🛵 🚗 🚚 🚇 🚙 🚈
-    ///
+    /// ]
+    /// ```
     public static let emojis = [
 		"🚲", "🚂", "🚁", "🚜", "🚕", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀",
 		"⛵️","🛸","🛶","🚌","🏍","🛺","🚡","🛵","🚗","🚚","🚇","🚙","🚈"
 	]
     
+    /// The main func allows you to create a new game
     private static func createMemoryGame() -> MemoryGame<String> {
         MemoryGame<String>(numberOfPairsOfCards: 8) { pairIndex in
             emojis [pairIndex]
@@ -28,30 +34,53 @@ class EmojiMemoryGame: ObservableObject {
     
     @Published private var model = createMemoryGame()
     
+    /// A cards Array
+    ///
+    /// ```
+    /// var cards: Array<Card> {
+    ///     model.cards
+    /// }
+    /// ```
     var cards: Array<Card> {
         model.cards
     }
     
     // MARK: Intents
-    ///
+    
     /// ### Intents
-    /// func choose
+    ///
+    /// The choose func
     ///
     /// Allows you to select the first and second card in a pair
+    /// ```
+    /// func choose (_ card: Card) {
+    ///     model.choose(card)
+    /// }
+    /// ```
     func choose (_ card: Card) {
         model.choose(card)
     }
     
-    /// func shuffle
+    /// The shuffle func
     ///
     /// Allows you to shuffle cards on the field
+    /// ```
+    /// func shuffle() {
+    ///     model.shuffle()
+    /// }
+    /// ```
     func shuffle() {
         model.shuffle()
     }
     
-    /// func restart
+    /// The restart func
     ///
     /// Allows you to restart the game
+    /// ```
+    /// func restart() {
+    ///     model = $.createMemoryGame()
+    /// }
+    /// ```
     func restart() {
         model = EmojiMemoryGame.createMemoryGame()
     }

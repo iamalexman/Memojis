@@ -1,5 +1,5 @@
 # 1. Workflow name
-name: docc
+name: actions
 
 # 2. Events
 on:
@@ -17,7 +17,7 @@ permissions:
 jobs:
   build:
     # 5. Runner machine
-    runs-on: macos-12
+    runs-on: macos-latest
     # 6. Job steps
     steps:
       - name: Checkout Repository

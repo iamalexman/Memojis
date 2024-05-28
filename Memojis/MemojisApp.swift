@@ -2,7 +2,7 @@
 //  MemojisApp.swift
 //  Memojis
 //
-//  Created by Alex Smith on 14.10.2021.
+//  Created by Alex Kuznetcov on 14.10.2021.
 //
 
 import SwiftUI

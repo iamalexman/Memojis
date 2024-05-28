@@ -2,7 +2,7 @@
 //  Cardufy.swift
 //  Memojis
 //
-//  Created by Alex Smith on 22.10.2021.
+//  Created by Alex Kuznetcov on 22.10.2021.
 //
 
 import SwiftUI

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E1B2DBE2C03C5D80006DD19 /* MemojisDocumentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B2DBD2C03C5D80006DD19 /* MemojisDocumentation.docc */; };
+		5E1B2DC02C068A1D0006DD19 /* Memojis.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B2DBF2C068A1D0006DD19 /* Memojis.docc */; };
+		5E1B2DCF2C0B8DBA0006DD19 /* MemojisDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1B2DC72C0B8DBA0006DD19 /* MemojisDoc.framework */; };
+		5E1B2DD02C0B8DBA0006DD19 /* MemojisDoc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1B2DC72C0B8DBA0006DD19 /* MemojisDoc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E5DE5ED2718D02800C79175 /* MemojisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5EC2718D02800C79175 /* MemojisApp.swift */; };
 		5E5DE5EF2718D02800C79175 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5EE2718D02800C79175 /* EmojiMemoryGameView.swift */; };
 		5E5DE5F12718D02900C79175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5DE5F02718D02900C79175 /* Assets.xcassets */; };
@@ -19,8 +21,33 @@
 		5E5DE603272212EC00C79175 /* Cardufy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE602272212EC00C79175 /* Cardufy.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5E1B2DCD2C0B8DBA0006DD19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E5DE5E12718D02800C79175 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E1B2DC62C0B8DBA0006DD19;
+			remoteInfo = MemojisDoc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5E1B2DD42C0B8DBA0006DD19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5E1B2DD02C0B8DBA0006DD19 /* MemojisDoc.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		5E1B2DBD2C03C5D80006DD19 /* MemojisDocumentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MemojisDocumentation.docc; sourceTree = "<group>"; };
+		5E1B2DBF2C068A1D0006DD19 /* Memojis.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Memojis.docc; sourceTree = "<group>"; };
+		5E1B2DC72C0B8DBA0006DD19 /* MemojisDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MemojisDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5DE5E92718D02800C79175 /* Memojis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memojis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5DE5EC2718D02800C79175 /* MemojisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojisApp.swift; sourceTree = "<group>"; };
 		5E5DE5EE2718D02800C79175 /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
@@ -34,10 +61,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E1B2DC42C0B8DBA0006DD19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E5DE5E62718D02800C79175 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1B2DCF2C0B8DBA0006DD19 /* MemojisDoc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +82,7 @@
 		5E5DE5E02718D02800C79175 = {
 			isa = PBXGroup;
 			children = (
+				5E1B2DBF2C068A1D0006DD19 /* Memojis.docc */,
 				5E5DE5EB2718D02800C79175 /* Memojis */,
 				5E5DE5EA2718D02800C79175 /* Products */,
 			);
@@ -56,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5DE5E92718D02800C79175 /* Memojis.app */,
+				5E1B2DC72C0B8DBA0006DD19 /* MemojisDoc.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +120,6 @@
 		5E855A672BFBC24D006680F5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5E1B2DBD2C03C5D80006DD19 /* MemojisDocumentation.docc */,
 				5E5DE5F02718D02900C79175 /* Assets.xcassets */,
 				5E5DE5F22718D02900C79175 /* Preview Content */,
 			);
@@ -119,7 +155,35 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5E1B2DC22C0B8DBA0006DD19 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		5E1B2DC62C0B8DBA0006DD19 /* MemojisDoc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E1B2DD12C0B8DBA0006DD19 /* Build configuration list for PBXNativeTarget "MemojisDoc" */;
+			buildPhases = (
+				5E1B2DC22C0B8DBA0006DD19 /* Headers */,
+				5E1B2DC32C0B8DBA0006DD19 /* Sources */,
+				5E1B2DC42C0B8DBA0006DD19 /* Frameworks */,
+				5E1B2DC52C0B8DBA0006DD19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemojisDoc;
+			productName = MemojisDoc;
+			productReference = 5E1B2DC72C0B8DBA0006DD19 /* MemojisDoc.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		5E5DE5E82718D02800C79175 /* Memojis */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E5DE5F72718D02900C79175 /* Build configuration list for PBXNativeTarget "Memojis" */;
@@ -127,10 +191,12 @@
 				5E5DE5E52718D02800C79175 /* Sources */,
 				5E5DE5E62718D02800C79175 /* Frameworks */,
 				5E5DE5E72718D02800C79175 /* Resources */,
+				5E1B2DD42C0B8DBA0006DD19 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5E1B2DCE2C0B8DBA0006DD19 /* PBXTargetDependency */,
 			);
 			name = Memojis;
 			productName = Memojis;
@@ -147,6 +213,9 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					5E1B2DC62C0B8DBA0006DD19 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					5E5DE5E82718D02800C79175 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -166,11 +235,19 @@
 			projectRoot = "";
 			targets = (
 				5E5DE5E82718D02800C79175 /* Memojis */,
+				5E1B2DC62C0B8DBA0006DD19 /* MemojisDoc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5E1B2DC52C0B8DBA0006DD19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E5DE5E72718D02800C79175 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +260,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5E1B2DC32C0B8DBA0006DD19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E5DE5E52718D02800C79175 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,16 +275,103 @@
 				5E5DE5FB271A189F00C79175 /* MemoryGame.swift in Sources */,
 				5E5DE603272212EC00C79175 /* Cardufy.swift in Sources */,
 				5E5DE5EF2718D02800C79175 /* EmojiMemoryGameView.swift in Sources */,
+				5E1B2DC02C068A1D0006DD19 /* Memojis.docc in Sources */,
 				5E5DE5ED2718D02800C79175 /* MemojisApp.swift in Sources */,
 				5E5DE5FF2720CAC200C79175 /* AspectVGrid.swift in Sources */,
-				5E1B2DBE2C03C5D80006DD19 /* MemojisDocumentation.docc in Sources */,
 				5E5DE5FD271A1A4400C79175 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5E1B2DCE2C0B8DBA0006DD19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E1B2DC62C0B8DBA0006DD19 /* MemojisDoc */;
+			targetProxy = 5E1B2DCD2C0B8DBA0006DD19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5E1B2DD22C0B8DBA0006DD19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QNY927L322;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = OneMoreOrganization.MemojisDoc;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E1B2DD32C0B8DBA0006DD19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QNY927L322;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = OneMoreOrganization.MemojisDoc;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5E5DE5F52718D02900C79175 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -237,6 +408,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DOCC_HOSTING_BASE_PATH = memojis;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -258,6 +430,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -300,6 +473,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DOCC_HOSTING_BASE_PATH = memojis;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -314,6 +488,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -330,6 +505,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Memojis/Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = QNY927L322;
+				DOCC_HOSTING_BASE_PATH = Memojis;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
@@ -346,6 +522,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MemojisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -365,6 +542,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Memojis/Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = QNY927L322;
+				DOCC_HOSTING_BASE_PATH = Memojis;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
@@ -381,6 +559,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MemojisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -394,6 +573,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E1B2DD12C0B8DBA0006DD19 /* Build configuration list for PBXNativeTarget "MemojisDoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E1B2DD22C0B8DBA0006DD19 /* Debug */,
+				5E1B2DD32C0B8DBA0006DD19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5E5DE5E42718D02800C79175 /* Build configuration list for PBXProject "Memojis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

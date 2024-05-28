@@ -13,8 +13,8 @@
    - Create a [script file](https://github.com/iamalexman/Memojis/blob/main/build-docc.sh) containing the commands:
 
       - Build rule to create the `.doccacrchive`
-      - Transforming rule to create the archive and convert it to a static site
-      - Make a redirect to the `.docs` directory
+      - Transforming rule to create an archive and convert it to a static site
+      - Make a redirect with `window.location.href` and put it in the `.docs` directory
      
 4. Publish it as a static site on your GitHub Pages
    - Choose a GitHub Actions source to build and deploy

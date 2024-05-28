@@ -2,7 +2,7 @@
 //  EmojiMemoryGameView.swift
 //  Memojis
 //
-//  Created by Alex Smith on 14.10.2021.
+//  Created by Alex Kuznetcov on 14.10.2021.
 //
 
 import SwiftUI
@@ -87,7 +87,7 @@ struct EmojiMemoryGameView: View {
         .animation(.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: isAnimating)
         .foregroundColor(CardConstants.color)
         .onTapGesture {
-            // "deal" cards
+            /// "deal" cards
             for card in game.cards {
                 withAnimation(dealAnimation(for: card)) {
                     deal(card)
@@ -109,8 +109,8 @@ struct EmojiMemoryGameView: View {
     }
     
     /// Description
-    /// - Parameter textStyle: textStyle description
-    /// - Returns: description
+    /// - Parameter label: "Restart"
+    /// - Returns: Action: game.restart()
     var restart: some View {
         Button("Restart") {
             withAnimation {
