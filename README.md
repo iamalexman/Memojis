@@ -5,20 +5,21 @@
 ![Screenshot 2024-05-26 at 13 31 56](https://github.com/iamalexman/Memojis/assets/61458847/23fe6ffa-3082-4f65-9fbd-392fe1c0b05f)
 
 1. Make a rich documentation for your project or framework
-   - Make the header and titles
-   - Change color and font
-   - Use tables, links, pictures and videos to make your documentation
+   - Make a header and titles using `Markdown` syntax
+   - Change color and font with `.json`
+   - Use tables, links, pictures and videos `@Macros` to make your documentation juicy
      
 3. Export it using GitHub Actions
-   - Make a script file 
-   - Write a build rule to your .doccacrchive
-   - Write a transforming rule to transform archive to static site
-   - Make a redirect from .docs directory
+   - Create a [script file](https://github.com/iamalexman/Memojis/blob/main/build-docc.sh) containing the commands:
+
+      - Build rule to create the `.doccacrchive`
+      - Transforming rule to create the archive and convert it to a static site
+      - Make a redirect to the `.docs` directory
      
-4. Publish it as a static site on the GitHub Pages
-   - Choose the GitHub Actions source for your build and deployment
-   - Make a directory for your future workflow .github/workflows on the root repo
-   - Configure YAML file and rules for your build and deployment jobs 
+4. Publish it as a static site on your GitHub Pages
+   - Choose a GitHub Actions source to build and deploy
+   - Create a directory for future workflow `.github/workflows` in the root repository
+   - Create a [YAML file](https://github.com/iamalexman/Memojis/blob/main/.github/workflows/docc.yml) and configure rules in it for building and deploying workflows
    
 >
 > This [documentation](https://iamalexman.github.io/Memojis/documentation/memojis) is based on a project I did studying Swift from the [Stanford's CS193p course, Developing Applications for iOS.](https://cs193p.sites.stanford.edu/about-cs193p)
@@ -30,7 +31,7 @@
 
 ### Memojis Application
 
-Test your brain! Flip the cards to find a maching emoji pair.
+🃏🃏 Test your brain to find emoji pairs and flip all the cards!
 
 #### Rules and gameplay
         
