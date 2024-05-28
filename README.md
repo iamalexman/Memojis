@@ -4,7 +4,7 @@
 
 ![Screenshot 2024-05-26 at 13 31 56](https://github.com/iamalexman/Memojis/assets/61458847/23fe6ffa-3082-4f65-9fbd-392fe1c0b05f)
 
-1. Make a rich documentation for your project or framework
+1. Craft a rich documentation of your project or framework
    - Make a header and titles using `Markdown` syntax
    - Change color and font with `.json`
    - Use tables, links, pictures and videos `@Macros` to make your documentation juicy
@@ -22,9 +22,9 @@
    - Create a [YAML file](https://github.com/iamalexman/Memojis/blob/main/.github/workflows/docc.yml) and configure rules in it for building and deploying workflows
    
 >
-> This [documentation](https://iamalexman.github.io/Memojis/documentation/memojis) is based on a project I did studying Swift from the [Stanford's CS193p course, Developing Applications for iOS.](https://cs193p.sites.stanford.edu/about-cs193p)
+> [The final documentation](https://iamalexman.github.io/Memojis/documentation/memojis) is based on a project I completed while learning Swift a few years ago in "Stanford's CS193p cource: Developing Applications for iOS"
 > 
-> The cource explains the fundamentals of how to build a memory game for iPhone and iPad using SwiftUI and MVVM architecture pattern.
+> The [cource](https://cs193p.sites.stanford.edu/about-cs193p) explains the fundamentals of how to build a memory game for iPhone and iPad using SwiftUI and MVVM architecture pattern.
 > 
 
 ##

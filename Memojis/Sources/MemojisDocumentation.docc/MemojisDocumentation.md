@@ -40,12 +40,7 @@ Test your brain! Flip the cards to find a maching emoji pair.
     }
 }
 
-
 ## Topics
 
 - ``MemojisApp``
 - ``CardView``
-
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
-
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
