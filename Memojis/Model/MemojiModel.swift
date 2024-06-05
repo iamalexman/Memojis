@@ -1,5 +1,5 @@
 //
-//  MemoryGame.swift
+//  MemojiModel.swift
 //  Memojis
 //
 //  Created by Alex Kuznetcov on 22.10.2021.
@@ -8,13 +8,17 @@
 import Foundation
 import SwiftUI
 
-struct MemoryGame<CardContent> where CardContent: Equatable {
+///```
+///struct MemojiModel<CardContent> where CardContent: Equatable
+///```
+struct MemojiModel<CardContent> where CardContent: Equatable {
     
-    var cards: Array<Card>
+    private(set) var cards: Array<Card>
+    private(set) var score = 0
     
     public var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter ({ cards[$0].isFaceUp }).oneAndOnly }
-        set { cards.indices.forEach { cards[$0].isFaceUp = ($0 == newValue) }}
+        set { cards.indices.forEach { cards[$0].isFaceUp = $0 == newValue }}
     }
   
     mutating func choose (_ card: Card) {
@@ -37,7 +41,9 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         cards.shuffle()
     }
     
-    init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
+    init(numberOfPairsOfCards: Int, 
+         createCardContent: (Int) -> CardContent) {
+        
         cards = []
         /// add numberOfPairsOfCards * 2 cards to cards array
         for pairIndex in 0..<numberOfPairsOfCards {
@@ -52,11 +58,9 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         
         var isFaceUp = false {
             didSet {
-                if isFaceUp {
-                    startUsingBonusTime()
-                } else {
-                    stopUsingBonusTime()
-                }
+                isFaceUp
+                ? startUsingBonusTime()
+                : stopUsingBonusTime()
             }
         }
         
@@ -80,7 +84,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         
         /// how long this card has ever been face up
         public var faceUpTime: TimeInterval {
-            if let lastFaceUpDate = lastFaceUpDate {
+            if let lastFaceUpDate {
                 return pastFaceUpTime + Date().timeIntervalSince(lastFaceUpDate)
             } else {
                 return pastFaceUpTime

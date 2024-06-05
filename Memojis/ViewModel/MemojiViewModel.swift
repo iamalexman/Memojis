@@ -1,5 +1,5 @@
 //
-//  EmojiMemoryGame.swift
+//  MemojiViewModel.swift
 //  Memojis
 //
 //  Created by Alex Kuznetcov on 22.10.2021.
@@ -7,34 +7,38 @@
 
 import SwiftUI
 ///
-/// Class EmojiMemoryGame has an emojis card set
+/// MemojiViewModel has an emojis card set
 ///
-class EmojiMemoryGame: ObservableObject {
-    typealias Card = MemoryGame<String>.Card
+class MemojiViewModel: ObservableObject {
     
-    /// A Set of emoji to generate pairs of cards based on them
+    typealias Card = MemojiModel<String>.Card
+    
+    /// Emoji set to create pairs of cards based on it
     ///
     /// ```
-    /// public static let emojis = [
-    /// 🚲 🚂 🚁 🚜 🚕 🏎 🚑 🚓 🚒 ✈️ 🚀
-    /// ⛵️🛸🛶🚌🏍🛺🚡🛵 🚗 🚚 🚇 🚙 🚈
-    /// ]
+    /// Emojis:
+    /// 🚲 🚂 🚁 🚜 🚕 🏎 🚑 🚓
+    /// ⛵️ 🛸 🛶 🚌 🏍 🛺 🚡 🛵
+    /// 🚒 ✈️ 🚀 🚈 🚗 🚚 🚇 🚙
+    ///
     /// ```
-    public static let emojis = [
+    public static var emojis = [
 		"🚲", "🚂", "🚁", "🚜", "🚕", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀",
 		"⛵️","🛸","🛶","🚌","🏍","🛺","🚡","🛵","🚗","🚚","🚇","🚙","🚈"
-	]
+    ]
     
     /// The main func allows you to create a new game
-    private static func createMemoryGame() -> MemoryGame<String> {
-        MemoryGame<String>(numberOfPairsOfCards: 8) { pairIndex in
-            emojis [pairIndex]
+    private static func createMemoryGame() -> MemojiModel<String> {
+        MemojiModel<String>(numberOfPairsOfCards: 8) { pairIndex in
+            emojis.shuffle()
+            let newEmojisSet = emojis
+            return newEmojisSet[pairIndex]
         }
     }
     
     @Published private var model = createMemoryGame()
     
-    /// A cards Array
+    /// Cards Array
     ///
     /// ```
     /// var cards: Array<Card> {
@@ -82,6 +86,6 @@ class EmojiMemoryGame: ObservableObject {
     /// }
     /// ```
     func restart() {
-        model = EmojiMemoryGame.createMemoryGame()
+        model = MemojiViewModel.createMemoryGame()
     }
 }
