@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+///
+/// - Parameters:
+///    - startAngle: Angle
+///    - endAngle: Angle
+///    - clockwise: Bool
+///
 struct Pie: Shape {
     
     var startAngle: Angle
@@ -21,6 +27,22 @@ struct Pie: Shape {
         }
     }
     
+    ///
+    /// Path method for animating
+    /// a circle in a card
+    ///
+    /// - Note: It's the same as a watch 🕓
+    ///
+    ///```swift
+    ///
+    /// `The Description` will be here, maybe
+    ///
+    /// - Parameter rect: CGRect
+    /// - Returns: Path
+    ///
+    /// ```
+    /// - Important: Strictly clockwise ❗️
+    ///
     func path(in rect: CGRect) -> Path {
         let center = CGPoint(x: rect.midX, y: rect.midY)
         let radius = min (rect.width,rect.height) / 2

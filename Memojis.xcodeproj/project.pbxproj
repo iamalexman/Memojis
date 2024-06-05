@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5E1B2DC02C068A1D0006DD19 /* Memojis.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B2DBF2C068A1D0006DD19 /* Memojis.docc */; };
+		5E1B2DD72C1656F60006DD19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E1B2DD62C1656F60006DD19 /* Preview Assets.xcassets */; };
 		5E5DE5ED2718D02800C79175 /* MemojisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5EC2718D02800C79175 /* MemojisApp.swift */; };
 		5E5DE5EF2718D02800C79175 /* MemojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5EE2718D02800C79175 /* MemojiView.swift */; };
 		5E5DE5F12718D02900C79175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5DE5F02718D02900C79175 /* Assets.xcassets */; };
-		5E5DE5F42718D02900C79175 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5DE5F32718D02900C79175 /* Preview Assets.xcassets */; };
 		5E5DE5FB271A189F00C79175 /* MemojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5FA271A189F00C79175 /* MemojiModel.swift */; };
 		5E5DE5FD271A1A4400C79175 /* MemojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5FC271A1A4400C79175 /* MemojiViewModel.swift */; };
 		5E5DE5FF2720CAC200C79175 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5DE5FE2720CAC200C79175 /* Grid.swift */; };
@@ -34,11 +34,11 @@
 
 /* Begin PBXFileReference section */
 		5E1B2DBF2C068A1D0006DD19 /* Memojis.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Memojis.docc; sourceTree = "<group>"; };
+		5E1B2DD62C1656F60006DD19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E5DE5E92718D02800C79175 /* Memojis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memojis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5DE5EC2718D02800C79175 /* MemojisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojisApp.swift; sourceTree = "<group>"; };
 		5E5DE5EE2718D02800C79175 /* MemojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiView.swift; sourceTree = "<group>"; };
 		5E5DE5F02718D02900C79175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E5DE5F32718D02900C79175 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E5DE5FA271A189F00C79175 /* MemojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiModel.swift; sourceTree = "<group>"; };
 		5E5DE5FC271A1A4400C79175 /* MemojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiViewModel.swift; sourceTree = "<group>"; };
 		5E5DE5FE2720CAC200C79175 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -57,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E1B2DD52C1191680006DD19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5E1B2DD62C1656F60006DD19 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		5E5DE5E02718D02800C79175 = {
 			isa = PBXGroup;
 			children = (
@@ -86,19 +94,11 @@
 			path = Memojis;
 			sourceTree = "<group>";
 		};
-		5E5DE5F22718D02900C79175 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				5E5DE5F32718D02900C79175 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		5E855A672BFBC24D006680F5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				5E5DE5F02718D02900C79175 /* Assets.xcassets */,
-				5E5DE5F22718D02900C79175 /* Preview Content */,
+				5E1B2DD52C1191680006DD19 /* Preview Content */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E5DE5F42718D02900C79175 /* Preview Assets.xcassets in Resources */,
+				5E1B2DD72C1656F60006DD19 /* Preview Assets.xcassets in Resources */,
 				5E5DE5F12718D02900C79175 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +357,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +394,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
