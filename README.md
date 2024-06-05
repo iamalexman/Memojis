@@ -19,7 +19,7 @@
 4. Publish it as a static site on your GitHub Pages
    - Choose a GitHub Actions source to build and deploy
    - Create a directory for future workflow `.github/workflows` in the root repository
-   - Create a [YAML file](https://github.com/iamalexman/Memojis/blob/main/.github/workflows/docc.yml) and configure rules in it for building and deploying workflows
+   - Create a [YAML file](https://github.com/iamalexman/Memojis/blob/main/.github/workflows/actions.yml) and configure rules in it for building and deploying workflows
    
 >
 > [The final documentation](https://iamalexman.github.io/Memojis/documentation/memojis) is based on a project I completed while learning Swift a few years ago in "Stanford's CS193p cource: Developing Applications for iOS"
