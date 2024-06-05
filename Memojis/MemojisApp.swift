@@ -12,11 +12,11 @@ import SwiftUI
 @main
 struct MemojisApp: App {
     
-    private let game = EmojiMemoryGame()
+    private let game = MemojiViewModel()
     
     var body: some Scene {
         WindowGroup {
-            EmojiMemoryGameView(game: game)
+            MemojiView(model: game)
         }
     }
 }

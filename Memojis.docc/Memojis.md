@@ -19,7 +19,7 @@ Test your brain! Flip the cards to find a maching emoji pair.
     @Column {
         @Video(poster: "screenshot", 
                source: "gameplay",
-               alt: "")
+               alt: "A video about the one game round")
     }
     @Column(size: 2) {
         ## Gameplay
@@ -34,9 +34,9 @@ Test your brain! Flip the cards to find a maching emoji pair.
         
         ## Another options:
         
-        The player can tap to restart the game.
+        - The player can tap the `restart` button to restart the game.
         
-        The player can shuffle the cardset&
+        - The player can tap the `shuffle` button to shuffle the cardset.
     }
 }
 

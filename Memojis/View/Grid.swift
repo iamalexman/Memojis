@@ -1,5 +1,5 @@
 //
-//  AspectVGrid.swift
+//  Grid.swift
 //  Memojis
 //
 //  Created by Alex Kuznetcov on 21.10.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Identifiable {
+struct Grid<Item, ItemView>: View where ItemView: View, Item: Identifiable {
     
     private var items: [Item]
     private var aspectRatio: CGFloat
