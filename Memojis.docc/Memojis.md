@@ -37,6 +37,8 @@ Test your brain! Flip the cards to find a maching emoji pair.
         - The player can tap the `restart` button to restart the game.
         
         - The player can tap the `shuffle` button to shuffle the cardset.
+        
+        > Tip: The game for only one player.
     }
 }
 

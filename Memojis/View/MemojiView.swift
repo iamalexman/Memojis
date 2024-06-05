@@ -7,21 +7,23 @@
 
 import SwiftUI
 
-///```
-///struct MemojiView: View
+///```swift
 ///
-///var body: some View {
-///  ZStack {
-///    VStack {
-///        game
-///        HStack {
-///          restart
-///          shuffle
-///        }
+///struct MemojiView: View {
+///  var body: some View {
+///    ZStack {
+///       VStack {
+///          game
+///          HStack {
+///            restart
+///            shuffle
+///          }
+///       }
+///       deck
 ///    }
-///    deck
 ///  }
 ///}
+///
 ///```
 struct MemojiView: View {
     
@@ -103,7 +105,7 @@ struct MemojiView: View {
         .animation(.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: isAnimating)
         .foregroundColor(Constants.color)
         .onTapGesture {
-            /// "deal" cards
+            /// "Deal" cards
             for card in model.cards {
                 withAnimation(dealAnimation(for: card)) {
                     deal(card)
@@ -130,9 +132,6 @@ struct MemojiView: View {
     var restart: some View {
         Button("Restart") {
             withAnimation {
-                model.cards.forEach { card in
-                    card.isMatched = false
-                }
                 deal = []
                 model.restart()
             }
@@ -154,18 +153,21 @@ struct MemojiView: View {
 ///
 /// CardView contains card and animated state
 ///
-///```
-///struct CardView: View
+///```swift
 ///
-///var body: some View {
-///  ZStack {
-///    Group {
-///      Pie
-///      card.content
-///    }
-///  }
-///}
+/// struct CardView: View {
+///     var body: some View {
+///         ZStack {
+///             Group {
+///                 Pie
+///                 card.content
+///             }
+///         }
+///     }
+/// }
+///
 ///```
+///
 struct CardView: View {
     
     let card: MemojiViewModel.Card

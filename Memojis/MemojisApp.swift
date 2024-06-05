@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 ///
 /// The entry point to the game
 ///
